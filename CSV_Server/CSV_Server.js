@@ -9,6 +9,7 @@ app.use("/HSG",require('./Routes/hsg5'));
 app.use("/HSG",require('./Routes/hsg4'));
 app.use("/HSG",require('./Routes/hsg2'));
 app.use("/HSG",require('./Routes/hsg1'));
+app.use("/Bystronic",require('./Routes/Bystronic12K'));
 app.listen(PORT,()=>{
     console.log(`Server listening requests on port: ${PORT}`)
 })
