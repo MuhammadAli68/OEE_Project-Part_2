@@ -6,7 +6,7 @@ const sql = require('mssql');
 router.get("/12K",async (req,res)=>{
     try {
         let pool = await sql.connect(config);
-        let result = await pool.request().query('SELECT TOP 10 * FROM [dbo].[Bystronic12K]');
+        let result = await pool.request().query('SELECT * FROM [dbo].[Bystronic12K]');
         // console.log("Result Keys:", Object.keys(result));
         // console.log("Result Object:", result);
         if (result.recordset) {
@@ -23,7 +23,7 @@ router.get("/12K",async (req,res)=>{
 router.get("/12K/shifts",async(req,res)=>{
     try {
         let pool = await sql.connect(config);
-        let result = await pool.request().query('SELECT TOP 10 * FROM [dbo].[Bystronic12K_shifts]');
+        let result = await pool.request().query('SELECT * FROM [dbo].[Bystronic12K_shifts]');
         // console.log("Result Keys:", Object.keys(result));
         // console.log("Result Object:", result);
         if (result.recordset) {

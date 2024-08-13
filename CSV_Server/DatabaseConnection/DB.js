@@ -19,6 +19,7 @@ const config = {
             }
         }
     },
+    connectionTimeout: 120000  // 120 seconds
 //    stream:true
 }
 
