@@ -1,7 +1,12 @@
 const express = require('express');
+const config = require('./DatabaseConnection/DB.js');
+const sql = require('mssql');
 
+const poolPromise = sql.connect(config);  // Create a pool promise
+module.exports = poolPromise;
 const app = express();
 const PORT = 3000;
+
 app.use("/HSG",require('./Routes/hsg8'));
 app.use("/HSG",require('./Routes/hsg7'));
 app.use("/HSG",require('./Routes/hsg6'));
